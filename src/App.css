@@ -1,0 +1,30 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (min-width: 1024px) {
+  .content-wrapper {
+    margin-right: 400px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .content-wrapper {
+    padding-bottom: 120px;
+  }
+}

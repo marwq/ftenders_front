@@ -1,0 +1,96 @@
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo {
+  height: 50px;
+  width: 100px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.search {
+  flex: 1;
+  max-width: 600px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-light);
+  background: var(--white);
+}
+
+.searchInput::placeholder {
+  color: var(--text-tertiary);
+}
+
+.filterSelect {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 160px;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-light);
+  background: var(--white);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+    width: 80px;
+  }
+
+  .searchInput {
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .filterSelect {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    min-width: 120px;
+  }
+}

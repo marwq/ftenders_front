@@ -1,0 +1,23 @@
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 85%;
+}
+
+.button {
+  border: 1px solid var(--border-light);
+  background: var(--gray-50);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.button:hover {
+  border-color: var(--accent-primary);
+  background: rgba(55, 48, 163, 0.08);
+  transform: translateY(-1px);
+}
