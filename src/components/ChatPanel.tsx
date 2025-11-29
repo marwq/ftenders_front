@@ -8,9 +8,10 @@ interface ChatPanelProps {
   selectedCount: number;
   onClearSelection: () => void;
   chatState: ChatState;
+  shouldOpen?: boolean;
 }
 
-export const ChatPanel = ({ selectedCount, onClearSelection, chatState }: ChatPanelProps) => {
+export const ChatPanel = ({ selectedCount, onClearSelection, chatState, shouldOpen }: ChatPanelProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const controls = useAnimation();
@@ -25,6 +26,13 @@ export const ChatPanel = ({ selectedCount, onClearSelection, chatState }: ChatPa
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  useEffect(() => {
+    if (shouldOpen && isMobile && !isOpen) {
+      setIsOpen(true);
+      controls.start({ y: 0 });
+    }
+  }, [shouldOpen, isMobile, isOpen, controls]);
 
   const handleDragEnd = (_: any, info: any) => {
     const shouldClose = info.velocity.y > 500 || info.offset.y > 100;

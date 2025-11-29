@@ -14,6 +14,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<ActiveFilter>('all');
   const [selectedTenderId, setSelectedTenderId] = useState<string | null>(null);
+  const [shouldOpenChat, setShouldOpenChat] = useState(false);
 
   // Convert filter to is_active parameter
   const isActiveParam =
@@ -36,7 +37,6 @@ function App() {
   };
 
   const handleTenderAction = (action: 'find_suppliers' | 'detailed_report', tenderId: string) => {
-    // reset modal + selection + chat + send prompt
     handleCloseModal();
     selectOnly(tenderId);
 
@@ -48,6 +48,9 @@ function App() {
         : 'Найди поставщиков для этого тендера с хорошей маржой. Найденных поставщиков проверь на благонадежность и сформируй подробный отчет.';
 
     chatState.sendMessage(prompt, [tenderId]);
+
+    setShouldOpenChat(true);
+    setTimeout(() => setShouldOpenChat(false), 100);
   };
 
   return (
@@ -74,6 +77,7 @@ function App() {
           selectedCount={selectedCount}
           onClearSelection={clearSelection}
           chatState={chatState}
+          shouldOpen={shouldOpenChat}
         />
       </div>
       <TenderModal
