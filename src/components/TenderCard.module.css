@@ -226,13 +226,22 @@
     font-size: 1rem;
   }
 
+  .status {
+    font-size: 0.625rem;
+    padding: 0.2rem 0.5rem;
+  }
+
   .label {
-    min-width: 120px;
-    font-size: 0.8125rem;
+    min-width: 100px;
+    font-size: 0.75rem;
   }
 
   .value {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
+  }
+
+  .detailRow {
+    font-size: 0.75rem;
   }
 
   .footer {

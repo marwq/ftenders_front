@@ -454,20 +454,28 @@
   }
 
   .header {
-    padding: 1rem 1.25rem;
+    padding: 0.875rem 1rem;
   }
 
   .title {
+    font-size: 1rem;
+  }
+
+  .closeBtn {
+    width: 32px;
+    height: 32px;
     font-size: 1.125rem;
   }
 
   .tabs {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
+    overflow-x: auto;
   }
 
   .tab {
-    padding: 0.875rem 1rem;
-    font-size: 0.875rem;
+    padding: 0.75rem 0.625rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   .content {
@@ -480,5 +488,13 @@
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .fieldLabel {
+    font-size: 0.75rem;
+  }
+
+  .fieldValue {
+    font-size: 0.875rem;
   }
 }
