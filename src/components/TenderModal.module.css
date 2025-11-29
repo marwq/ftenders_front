@@ -444,6 +444,7 @@
   .overlay {
     padding: 0;
     z-index: 130;
+    align-items: flex-start;
   }
 
   .modal {
@@ -455,6 +456,7 @@
 
   .header {
     padding: 0.875rem 1rem;
+    padding-top: max(0.875rem, env(safe-area-inset-top));
   }
 
   .title {
