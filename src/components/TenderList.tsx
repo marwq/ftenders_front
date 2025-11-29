@@ -47,7 +47,7 @@ export const TenderList = ({
 
   return (
     <div className={styles.list}>
-      {tenders.map((tender, index) => (
+      {tenders.map((tender) => (
         <TenderCard
           key={tender._id}
           tender={tender}

@@ -35,11 +35,6 @@ export const SatuProductSearch = ({ toolInput }: SatuProductSearchProps) => {
     fetchProducts();
   }, [toolInput.query, toolInput.page]);
 
-  const getProductUrl = (product: SatuProduct) => {
-    const slug = product.product.urlText || 'product';
-    return `https://satu.kz/p${product.product.id}-${slug}.html`;
-  };
-
   const getPresenceStatus = (product: SatuProduct) => {
     const { presence, catalogPresence } = product.product;
     if (presence.isAvailable) return 'В наличии';

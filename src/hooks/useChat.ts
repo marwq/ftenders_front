@@ -17,7 +17,7 @@ export const useChat = (selectedTenderIds: string[]) => {
   const [isConnected, setIsConnected] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const wsRef = useRef<WebSocket | null>(null);
-  const reconnectTimeoutRef = useRef<NodeJS.Timeout>();
+  const reconnectTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const shouldReconnectRef = useRef(true);
   const pendingMessagesRef = useRef<Array<{ text: string; mentioned?: string[] }>>([]);
   const selectedTenderIdsRef = useRef(selectedTenderIds);
