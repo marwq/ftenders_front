@@ -4,7 +4,7 @@ import type { Tender } from '../types/tender';
 
 const ITEMS_PER_PAGE = 10;
 
-export const useTenders = (query?: string, isActiveFilter?: boolean) => {
+export const useTenders = (query?: string, isActiveFilter?: boolean, priceFrom?: number, priceTo?: number) => {
   const [tenders, setTenders] = useState<Tender[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -21,6 +21,8 @@ export const useTenders = (query?: string, isActiveFilter?: boolean) => {
         offset: 0,
         query,
         is_active: isActiveFilter,
+        price_from: priceFrom,
+        price_to: priceTo,
       });
 
       setTenders(response.result);
@@ -31,7 +33,7 @@ export const useTenders = (query?: string, isActiveFilter?: boolean) => {
     } finally {
       setLoading(false);
     }
-  }, [query, isActiveFilter]);
+  }, [query, isActiveFilter, priceFrom, priceTo]);
 
   const loadMoreTenders = useCallback(async () => {
     if (!hasMore || loading) return;
@@ -45,6 +47,8 @@ export const useTenders = (query?: string, isActiveFilter?: boolean) => {
         offset: tenders.length,
         query,
         is_active: isActiveFilter,
+        price_from: priceFrom,
+        price_to: priceTo,
       });
 
       setTenders((prev) => [...prev, ...response.result]);
@@ -54,7 +58,7 @@ export const useTenders = (query?: string, isActiveFilter?: boolean) => {
     } finally {
       setLoading(false);
     }
-  }, [tenders.length, hasMore, loading, query, isActiveFilter]);
+  }, [tenders.length, hasMore, loading, query, isActiveFilter, priceFrom, priceTo]);
 
   useEffect(() => {
     loadInitialTenders();

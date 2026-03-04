@@ -40,15 +40,15 @@
   /* Semantic colors */
   --bg-primary: var(--white);
   --bg-secondary: var(--gray-50);
-  --bg-tertiary: var(--indigo-50);
+  --bg-tertiary: var(--gray-100);
 
   --text-primary: var(--gray-900);
   --text-secondary: var(--gray-600);
   --text-tertiary: var(--gray-500);
 
-  --accent-primary: var(--indigo-600);
-  --accent-hover: var(--indigo-700);
-  --accent-light: var(--indigo-100);
+  --accent-primary: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-light: #EFF6FF;
 
   --border-light: var(--gray-200);
   --border-medium: var(--gray-300);
@@ -106,8 +106,8 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--accent-light);
-  color: var(--accent-primary);
+  background: var(--gray-200);
+  color: var(--text-primary);
 }
 
 ::-webkit-scrollbar {

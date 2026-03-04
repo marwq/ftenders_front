@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Package, CalendarDays } from 'lucide-react';
 import type { Tender } from '../types/tender';
 import styles from './TenderCard.module.css';
 
@@ -86,11 +87,11 @@ export const TenderCard = ({ tender, isSelected, onToggleSelect, onCardClick }: 
           </div>
           <div className={styles.meta}>
             <div className={styles.metaItem}>
-              <span className={styles.metaIcon}>📦</span>
+              <Package size={16} className={styles.metaIcon} />
               <span>{announcement.lot_count} лотов</span>
             </div>
             <div className={styles.metaItem}>
-              <span className={styles.metaIcon}>📅</span>
+              <CalendarDays size={16} className={styles.metaIcon} />
               <span>До {formatDate(announcement.offer_end_date)}</span>
             </div>
           </div>

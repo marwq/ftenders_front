@@ -1,4 +1,3 @@
-/* Desktop Sidebar */
 .sidebar {
   width: 400px;
   height: 100vh;
@@ -10,7 +9,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 50;
+  z-index: 30;
 }
 
 .sidebarContent {
@@ -18,6 +17,7 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  padding-top: 83px;
 }
 
 .chatContainer {
@@ -25,11 +25,7 @@
   min-height: 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg,
-    var(--gray-50) 0%,
-    var(--indigo-50) 50%,
-    var(--gray-50) 100%
-  );
+  background: var(--gray-50);
 }
 
 .header {
@@ -46,7 +42,7 @@
 .title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--accent-primary);
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -55,10 +51,10 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  border: 1px solid var(--accent-primary);
+  border: 1px solid var(--border-medium);
   border-radius: 8px;
   animation: slideIn 0.3s ease;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--white);
 }
 
 @keyframes slideIn {
@@ -75,7 +71,7 @@
 .selectedText {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   white-space: nowrap;
 }
 
@@ -85,7 +81,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-primary);
+  background: var(--gray-400);
   color: var(--white);
   border-radius: 4px;
   font-size: 0.75rem;
@@ -94,7 +90,7 @@
 }
 
 .clearButton:hover {
-  background: var(--accent-hover);
+  background: var(--gray-600);
   transform: scale(1.1);
 }
 
@@ -106,7 +102,6 @@
   overflow: hidden;
 }
 
-/* Mobile Drawer */
 .overlay {
   position: fixed;
   inset: 0;
@@ -184,5 +179,4 @@
   .selectedText {
     font-size: 0.8125rem;
   }
-
 }

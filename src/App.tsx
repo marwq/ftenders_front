@@ -13,6 +13,8 @@ type ActiveFilter = 'all' | 'active' | 'inactive';
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeFilter, setActiveFilter] = useState<ActiveFilter>('all');
+  const [priceFrom, setPriceFrom] = useState<number | undefined>(undefined);
+  const [priceTo, setPriceTo] = useState<number | undefined>(undefined);
   const [selectedTenderId, setSelectedTenderId] = useState<string | null>(null);
   const [shouldOpenChat, setShouldOpenChat] = useState(false);
 
@@ -22,7 +24,9 @@ function App() {
 
   const { tenders, loading, hasMore, loadMoreTenders } = useTenders(
     searchQuery,
-    isActiveParam
+    isActiveParam,
+    priceFrom,
+    priceTo
   );
   const { selectedIds, selectedCount, toggleTender, clearSelection, selectOnly } =
     useSelectedTenders();
@@ -60,6 +64,12 @@ function App() {
         onSearchChange={setSearchQuery}
         activeFilter={activeFilter}
         onActiveFilterChange={setActiveFilter}
+        priceFrom={priceFrom}
+        priceTo={priceTo}
+        onPriceFromChange={setPriceFrom}
+        onPriceToChange={setPriceTo}
+        selectedCount={selectedCount}
+        onClearSelection={clearSelection}
       />
       <div className="main-container">
         <div className="content-wrapper">

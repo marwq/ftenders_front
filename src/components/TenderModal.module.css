@@ -35,7 +35,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  background: linear-gradient(135deg, var(--indigo-50) 0%, var(--white) 100%);
+  background: var(--white);
 }
 
 .headerContent {
@@ -53,7 +53,7 @@
 
 .number {
   font-size: 0.875rem;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   font-weight: 600;
   font-family: 'Courier New', monospace;
 }
@@ -73,8 +73,8 @@
 }
 
 .closeBtn:hover {
-  background: var(--accent-primary);
-  color: var(--white);
+  background: var(--gray-200);
+  color: var(--text-primary);
   transform: scale(1.05);
 }
 
@@ -100,13 +100,13 @@
 }
 
 .tab:hover {
-  color: var(--accent-primary);
-  background: rgba(55, 48, 163, 0.05);
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .tabActive {
-  color: var(--accent-primary);
-  border-bottom-color: var(--accent-primary);
+  color: var(--text-primary);
+  border-bottom-color: var(--gray-800);
   background: var(--white);
 }
 
@@ -231,7 +231,7 @@
 }
 
 .lot:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--border-medium);
   box-shadow: var(--shadow-md);
 }
 
@@ -302,8 +302,8 @@
 }
 
 .planItem:hover {
-  background: var(--indigo-50);
-  border-color: var(--accent-primary);
+  background: var(--gray-100);
+  border-color: var(--border-medium);
 }
 
 .planItemHeader {
@@ -316,8 +316,8 @@
 .planItemNumber {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--accent-primary);
-  background: var(--accent-light);
+  color: var(--text-secondary);
+  background: var(--gray-100);
   padding: 0.25rem 0.75rem;
   border-radius: 6px;
 }
@@ -346,7 +346,7 @@
   line-height: 1.5;
   margin: 0;
   padding-left: 1rem;
-  border-left: 3px solid var(--accent-light);
+  border-left: 3px solid var(--border-light);
 }
 
 .planItemDetails {
@@ -408,8 +408,8 @@
 }
 
 .fileItem:hover {
-  background: var(--accent-light);
-  border-color: var(--accent-primary);
+  background: var(--gray-100);
+  border-color: var(--border-medium);
   transform: translateX(4px);
 }
 
@@ -424,7 +424,7 @@
 
 .fileDownload {
   font-size: 1.25rem;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
 }
 
 .noFiles {

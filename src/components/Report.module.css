@@ -1,7 +1,7 @@
 .card {
-  border: 1px solid var(--accent-light);
+  border: 1px solid var(--border-light);
   border-radius: 12px;
-  background: rgba(55, 48, 163, 0.04);
+  background: var(--gray-50);
   padding: 0.75rem 1rem;
   max-width: 85%;
   display: flex;
@@ -12,12 +12,12 @@
 
 .title {
   font-weight: 700;
-  color: var(--accent-primary);
+  color: var(--text-primary);
   font-size: 0.9375rem;
 }
 
 .openButton {
-  background: var(--accent-primary);
+  background: var(--gray-900);
   color: var(--white);
   border: none;
   border-radius: 10px;
@@ -177,7 +177,7 @@
 
 .barFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-primary), #5b8def);
+  background: var(--gray-700);
   border-radius: 999px;
   transition: width 0.3s ease;
 }
@@ -209,7 +209,7 @@
   color: var(--white);
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(55, 48, 163, 0.35);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 

@@ -47,6 +47,9 @@ export const TenderList = ({
 
   return (
     <div className={styles.list}>
+      <div className={styles.listHeader}>
+        <h2 className={styles.listTitle}>Найдено {tenders.length}{hasMore ? '+' : ''} тендеров</h2>
+      </div>
       {tenders.map((tender) => (
         <TenderCard
           key={tender._id}

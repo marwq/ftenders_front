@@ -7,6 +7,8 @@ export interface FetchTendersParams {
   offset?: number;
   is_active?: boolean;
   query?: string;
+  price_from?: number;
+  price_to?: number;
 }
 
 export const api = {
@@ -16,6 +18,8 @@ export const api = {
     if (params.limit !== undefined) searchParams.set('limit', params.limit.toString());
     if (params.offset !== undefined) searchParams.set('offset', params.offset.toString());
     if (params.is_active !== undefined) searchParams.set('is_active', params.is_active.toString());
+    if (params.price_from !== undefined) searchParams.set('price_from', params.price_from.toString());
+    if (params.price_to !== undefined) searchParams.set('price_to', params.price_to.toString());
 
     // Only send query if it has non-whitespace characters after trimming
     const trimmedQuery = params.query?.trim();

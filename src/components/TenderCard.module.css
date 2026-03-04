@@ -19,14 +19,14 @@
   left: 0;
   width: 4px;
   height: 100%;
-  background: var(--accent-primary);
+  background: var(--gray-800);
   transform: scaleY(0);
   transition: transform 0.3s ease;
   transform-origin: top;
 }
 
 .card:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--border-medium);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
 }
@@ -36,7 +36,7 @@
 }
 
 .card.selected {
-  border-color: var(--accent-primary);
+  border-color: var(--gray-800);
   background: var(--white);
   box-shadow: var(--shadow-md);
 }
@@ -80,8 +80,8 @@
 }
 
 .checkboxInput:checked + .checkboxLabel {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--gray-800);
+  border-color: var(--gray-800);
 }
 
 .checkboxInput:checked + .checkboxLabel::after {
@@ -89,7 +89,7 @@
 }
 
 .checkboxLabel:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--gray-500);
 }
 
 .content {
@@ -116,7 +116,7 @@
 .number {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   font-family: 'Courier New', monospace;
 }
 
@@ -130,13 +130,15 @@
 }
 
 .status.active {
-  background: #10B981;
-  color: white;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .status.inactive {
-  background: #EF4444;
-  color: white;
+  background: rgba(239, 68, 68, 0.08);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
 }
 
 .title {
@@ -214,7 +216,8 @@
 }
 
 .metaIcon {
-  font-size: 1rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {

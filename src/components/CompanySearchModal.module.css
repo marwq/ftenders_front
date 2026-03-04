@@ -90,7 +90,7 @@
 }
 
 .companyCard:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--border-medium);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }

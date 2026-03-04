@@ -53,23 +53,10 @@ export const ChatPanel = ({ selectedCount, onClearSelection, chatState, shouldOp
   };
 
   if (!isMobile) {
-    // Desktop sidebar
     return (
       <aside className={styles.sidebar}>
         <div className={styles.sidebarContent}>
           <div className={styles.chatContainer}>
-            <div className={styles.header}>
-              <h2 className={styles.title}>AI Агент</h2>
-              {selectedCount > 0 && (
-                <div className={styles.selectedBadge}>
-                  <span className={styles.selectedText}>Выделено {selectedCount} тендеров</span>
-                  <button onClick={onClearSelection} className={styles.clearButton}>
-                    ✕
-                  </button>
-                </div>
-              )}
-            </div>
-
             <div className={styles.chatContent}>
               <Chat chatState={chatState} />
             </div>
@@ -79,7 +66,6 @@ export const ChatPanel = ({ selectedCount, onClearSelection, chatState, shouldOp
     );
   }
 
-  // Mobile drawer
   return (
     <>
       {isOpen && (

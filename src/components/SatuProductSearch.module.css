@@ -5,7 +5,7 @@
   padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--accent-primary);
+  border: 1px solid var(--border-light);
   border-radius: 10px;
   max-width: 85%;
   margin-bottom: 0.75rem;
@@ -20,7 +20,7 @@
 .toolTitle {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--text-secondary);
   font-family: 'Courier New', monospace;
 }
 
@@ -41,12 +41,12 @@
 }
 
 .productsContainer::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.2);
+  background: var(--gray-300);
   border-radius: 3px;
 }
 
 .productsContainer::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.3);
+  background: var(--gray-400);
 }
 
 .productCard {
@@ -63,8 +63,8 @@
 }
 
 .productCard:hover {
-  border-color: var(--accent-primary);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+  border-color: var(--border-medium);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
@@ -105,7 +105,7 @@
 .productPrice {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: var(--accent-primary);
+  color: var(--text-primary);
 }
 
 .productCompany {
