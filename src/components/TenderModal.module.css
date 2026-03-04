@@ -3,7 +3,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
-  z-index: 60;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -443,7 +443,7 @@
 @media (max-width: 768px) {
   .overlay {
     padding: 0;
-    z-index: 130;
+    z-index: 1000;
     align-items: flex-start;
   }
 
